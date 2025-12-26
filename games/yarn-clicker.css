@@ -1,0 +1,157 @@
+/* for game */
+
+#score {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff00aa; 
+}
+
+#game {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #b2f5ea; 
+    border: 2px dashed #ff00aa; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.yarn {
+    width: 150px;
+    height: 150px;
+    background-image: url("images/yarn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 0.8s infinite;
+    /* box-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; */
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#meowoshka {
+    width: 180px;
+    margin-top: 20px;
+    display: block;
+}
+
+.sparkle {
+    width: 10px;
+    height: 10px;
+    background-color: #ff4df0; 
+    border-radius: 50%;
+    position: absolute;
+    animation sparkleAnim 0.5s ease-out forwards;
+    box-shadow: 0 0 10px #ff4df0;
+}
+
+@keyframes sparkleAnim {
+    from { transform: scale(1); opacity 1; }
+    to { transform: scale(2); opacity 0; }
+}
+
+.pop {
+    animation: popAnim 0.2s forwards;
+}
+
+@keyframes sparkleAnim {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
+}
+
+.win-message {
+    font-size: 24px;
+    color: #ff00aa;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+
+}
+
+/* overall page stuff */
+body {
+    background-color: hsl(329, 83%, 74%);
+    color: #ff00aa;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ff00aa;
+    transition: 0.4s;
+}
+
+/* rainbow hover effect */
+a:hover {
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+            
+    /* standard property */
+    background-clip: text;
+            
+    /* WebKit fallback (Chrome, Safari) */
+    -webkit-background-clip: text;
+            
+    color: transparent;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    postition: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #b2f5ea; /* light mint green */
+    padding: 10px 20px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    color:  #ff4df0;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 5px #ff4df0;
+
+    /* for the rainbow */ 
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+            
+    /* standard property */
+    background-clip: text;
+            
+    /* WebKit fallback (Chrome, Safari) */
+    -webkit-background-clip: text;
+            
+    color: transparent;
+}
