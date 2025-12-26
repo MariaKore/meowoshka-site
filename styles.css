@@ -1,0 +1,86 @@
+
+body {
+    background-color: hsl(329, 83%, 74%);
+    color: #ff00aa;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ff00aa;
+    transition: 0.4s;
+}
+
+.meow-pic {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    bow-shadow: 0 0 10px #b2f5ea;
+    border: 2px dashed #ff00aa;
+    border-radius: 20px;
+}
+
+/* rainbow hover effect */
+a:hover {
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+            
+    /* standard property */
+    background-clip: text;
+            
+    /* WebKit fallback (Chrome, Safari) */
+    -webkit-background-clip: text;
+            
+    color: transparent;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    postition: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #b2f5ea; /* light mint green */
+    padding: 10px 20px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    color:  #ff4df0;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 5px #ff4df0;
+
+    /* for the rainbow */ 
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+            
+    /* standard property */
+    background-clip: text;
+            
+    /* WebKit fallback (Chrome, Safari) */
+    -webkit-background-clip: text;
+            
+    color: transparent;
+}
